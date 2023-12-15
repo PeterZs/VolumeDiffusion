@@ -10,7 +10,7 @@ VolumeDiffusion is a **fast** and **scalable** text-to-3D generation method that
 
 ### Result
 
-https://github.com/tzco/VolumeDiffusion/assets/97946330/5ebff6dd-a735-4927-b38d-c12fa572f6a6
+https://github.com/tzco/VolumeDiffusion/assets/97946330/87875b52-3b0c-4364-a5a4-b949d107359f
 
 ### Method
 
