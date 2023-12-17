@@ -10,7 +10,35 @@ VolumeDiffusion is a **fast** and **scalable** text-to-3D generation method that
 
 ### Result
 
-https://github.com/tzco/VolumeDiffusion/assets/97946330/87875b52-3b0c-4364-a5a4-b949d107359f
+https://github.com/tzco/VolumeDiffusion/assets/97946330/71d62f48-c950-433d-94f6-a56bc5ae593f
+
+<details open>
+  <summary>Generations 1 (Figure 5 in paper)</summary>
+  <img src='assets/results_1.png'>
+  <img src='assets/results_2.png'>
+</details>
+
+<details>
+  <summary>Generations 2 (Figure 9 in paper)</summary>
+  <img src='assets/results_3.png'>
+  <img src='assets/results_4.png'>
+</details>
+
+<details>
+  <summary>Generations 3 (Figure 10 in paper)</summary>
+  <img src='assets/results_5.png'>
+  <img src='assets/results_6.png'>
+</details>
+
+<details>
+  <summary>Diversity (Figure 11 in paper)</summary>
+  <img src='assets/results_7.png'>
+</details>
+
+<details>
+  <summary>Flexibility (Figure 12 in paper)</summary>
+  <img src='assets/results_8.png'>
+</details>
 
 ### Method
 
@@ -37,7 +65,7 @@ The diffusion model learns to predict ground-truths given noised volumes and tex
 
 Run `sh install.sh` and start enjoying your generation!
 
-We recommand and have tested the code with the docker image `pytorch/pytorch:2.1.0-cuda12.1-cudnn8-devel`.
+We recommend and have tested the code with the docker image `pytorch/pytorch:2.1.0-cuda12.1-cudnn8-devel`.
 
 ## Inference
 
@@ -75,35 +103,13 @@ python train_diffusion.py path/to/object_list path/to/save --data_root path/to/d
 
 We recommend pre-calculating the `mean` and `std` of the outputs of the trained volume encoder on the dataset (or part of the dataset). This encourages the inputs close to the standard normal distribution and benefits the training of the diffusion model. Or you can directly set `mean=0` and `std=20`.
 
-## More results
-
-### Generations
-
-<img src='assets/results_1.png'>
-
-<img src='assets/results_2.png'>
-
-<img src='assets/results_3.png'>
-
-<img src='assets/results_4.png'>
-
-<img src='assets/results_5.png'>
-
-<img src='assets/results_6.png'>
-
-### Diversity
-
-<img src='assets/results_7.png'>
-
-### Flexibility
-
-<img src='assets/results_8.png'>
-
 ## Acknowledgments
 
 This code borrows heavily from [stable-dreamfusion](https://github.com/ashawkey/stable-dreamfusion).
 
 We use [threestudio](https://github.com/threestudio-project/threestudio) and do two minor modifications for the refinement stage.
+
+We use [DeepFloyd/IF-I-XL-v1.0](https://huggingface.co/DeepFloyd/IF-I-XL-v1.0) model as supervision of the refinement stage.
 
 We use [dpm-solver](https://github.com/LuChengTHU/dpm-solver) as the solver of diffusion model inference.
 
