@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is the official repo of the paper [VolumeDiffusion: Flexible Text-to-3D Generation with Efficient Volumetric Encoder](https://arxiv.org/abs/23xx.xxxxx).
+This is the official repo of the paper [VolumeDiffusion: Flexible Text-to-3D Generation with Efficient Volumetric Encoder](https://arxiv.org/abs/2312.11459).
 
 ### TL;DR
 
@@ -53,11 +53,13 @@ The diffusion model learns to predict ground-truths given noised volumes and tex
 ### Citation
 
 ```
-@Article{VolumeDiffusion2023,
-  author  = {Zhicong Tang, Shuyang Gu, Chunyu Wang, Ting Zhang, Jianmin Bao, Dong Chen and Baining Guo},
-  journal = {arXiv:23xx.xxxxx},
-  title   = {VolumeDiffusion: Flexible Text-to-3D Generation with Efficient Volumetric Encoder},
-  year    = {2023},
+@misc{tang2023volumediffusion,
+      title={VolumeDiffusion: Flexible Text-to-3D Generation with Efficient Volumetric Encoder}, 
+      author={Zhicong Tang and Shuyang Gu and Chunyu Wang and Ting Zhang and Jianmin Bao and Dong Chen and Baining Guo},
+      year={2023},
+      eprint={2312.11459},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
 }
 ```
 
@@ -82,7 +84,7 @@ python inference.py --prompt "a yellow hat with a bunny ear on top" --image_chan
 Also, you can use different prompts for diffusion generation and refinement. This is useful when generating complicated object with multiple concepts and attributes:
 
 ```
-python inference.py --prompt "a yellow hat with a bunny ear on top" --prompt_refine "a yellow hat with a white bunny ear on top" --image_channel 4
+python inference.py --prompt "a teapot with a spout and handle" --prompt_refine "a blue teapot with a spout and handle" --image_channel 4
 ```
 
 ## Training
